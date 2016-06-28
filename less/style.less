@@ -88,6 +88,7 @@ header{
   text-align: center;
   &:extend(.inblock);
   .bxslider{
+    position:relative;
     img{
       width:100%;
     }
@@ -101,7 +102,7 @@ header{
     text-transform: uppercase;
     top: 41%;
     h3{
-      font-size: 55px;
+      font-size: 42px;
       font-weight: 600;
     }
     p{
@@ -116,27 +117,30 @@ header{
       font-weight: 600;
       margin-top: 30px;
       padding: 13px 35px;
-
-    }
-  }
-  .bx-pager{
-    bottom: 20px;
-    .bx-pager-item{
-      color:red;
-      a{
-        background: #fff none repeat scroll 0 0;
-        &.active,&:hover{
-          background: @themecolor none repeat scroll 0 0;
-        }
+      &:extend(.transition);
+      &:hover{
+        background: #46b7bd-#111 none repeat scroll 0 0;
       }
     }
   }
-  .bx-controls-direction{
-    display:none;
-  }
-  .bx-wrapper{
-    margin:0;
-  }
+  //.bx-pager{
+  //  bottom: 20px;
+  //  .bx-pager-item{
+  //    color:red;
+  //    a{
+  //      background: #fff none repeat scroll 0 0;
+  //      &.active,&:hover{
+  //        background: @themecolor none repeat scroll 0 0;
+  //      }
+  //    }
+  //  }
+  //}
+  //.bx-controls-direction{
+  //  display:none;
+  //}
+  //.bx-wrapper{
+  //  margin:0;
+  //}
 }
 .news-letter{
   background: transparent url("../images/news-bg.jpg") no-repeat scroll 0 center / cover ;
@@ -164,7 +168,7 @@ header{
       width: 360px;
     }
     &[type="submit"]{
-      background: red url("../images/grd.png") repeat-x scroll 0 0;
+      background: #46b7bd none repeat scroll 0 0;
       border: medium none;
       color: #fff;
       display: inline-block;
@@ -176,6 +180,7 @@ header{
 .content-box{
   &:extend(.inblock);
   text-align: center;
+  margin-top:40px;
 }
 .head2{
   color: #46b7bd;
@@ -248,7 +253,7 @@ header{
 .workshops-item{
   position: relative;
   &:after{
-    background: transparent none repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
     box-shadow: 0 0 40px -14px #909090 inset;
     content: "";
     height: 100%;
@@ -256,11 +261,15 @@ header{
     position: absolute;
     top: 0;
     width: 100%;
+    &:extend(.transition);
+  }
+  &:hover:after{
+    background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;
   }
   img{
     width: 100%;
   }
-  h4{
+  a{
     background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;
     color: #fff;
     font-size: 36px;
@@ -270,7 +279,14 @@ header{
     text-transform: uppercase;
     top: 47%;
     width: 100%;
+    z-index: 1;
+    left:0;
+    &:extend(.transition);
   }
+  &:hover a{
+    background: rgba(70,183,189,0.8) none repeat scroll 0 0;
+  }
+
 }
 .blog-item{
   margin-bottom: 30px;
@@ -300,11 +316,15 @@ header{
       font-size: 19px;
     }
     a{
-      background: red url("../images/grd.png") repeat-x scroll 0 0;
+      background: #46b7bd repeat scroll 0 0;
       color: #fff;
       float: right;
       font-family: "Nexa",arial,sans-serif;
       padding: 8px 12px;
+      &:extend(.transition);
+      &:hover{
+        background: #36A7AD repeat scroll 0 0;
+      }
     }
   }
 }
@@ -341,7 +361,6 @@ header{
       }
     }
     .bx-controls-direction{
-      color:Red;
       a{
         height: 70px;
         width: 25px;
@@ -545,8 +564,12 @@ footer{
   }
 
   .ft-nav{
-    margin: 20px 0;
+    margin: 20px 0;bxslider
+
     text-align: center;
+    li{
+      display:inline-block;
+    }
     a{
       color: #2ab0b3;
       display: inline-block;
@@ -677,7 +700,7 @@ footer{
     top: 17%;
   }
   .main-slider .caption h3 {
-    font-size: 23px;
+    font-size: 27px;
   }
   .main-slider .caption p {
     font-size: 15px;
@@ -838,7 +861,7 @@ footer{
     top: 30%;
   }
   .main-slider .caption h3 {
-    font-size: 38px;
+    font-size: 35px;
   }
   .main-slider .caption p {
     font-size: 20px;
@@ -897,7 +920,7 @@ footer{
     font-size: 40px;
   }
   .main-slider .caption h3 {
-    font-size: 48px;
+    font-size: 40px;
   }
   .main-slider .caption p {
     font-size: 23px;
@@ -922,7 +945,7 @@ footer{
     top: 41%;
   }
   .main-slider .caption h3 {
-    font-size: 55px;
+    font-size: 42px;
   }
   .news-letter h4 {
     font-size: 43px;

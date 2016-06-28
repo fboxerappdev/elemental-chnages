@@ -12,8 +12,12 @@ header,
 }
 .transition,
 .navbar .main-ul li a,
+.main-slider .caption a,
 .main-wrapper .calm-item:before,
 .main-wrapper .calm-item .over a,
+.workshops-item:after,
+.workshops-item a,
+.blog-item .info-box a,
 footer .social a {
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
@@ -94,6 +98,9 @@ header .logo img {
 .main-slider {
   text-align: center;
 }
+.main-slider .bxslider {
+  position: relative;
+}
 .main-slider .bxslider img {
   width: 100%;
 }
@@ -107,7 +114,7 @@ header .logo img {
   top: 41%;
 }
 .main-slider .caption h3 {
-  font-size: 55px;
+  font-size: 42px;
   font-weight: 600;
 }
 .main-slider .caption p {
@@ -123,24 +130,8 @@ header .logo img {
   margin-top: 30px;
   padding: 13px 35px;
 }
-.main-slider .bx-pager {
-  bottom: 20px;
-}
-.main-slider .bx-pager .bx-pager-item {
-  color: red;
-}
-.main-slider .bx-pager .bx-pager-item a {
-  background: #fff none repeat scroll 0 0;
-}
-.main-slider .bx-pager .bx-pager-item a.active,
-.main-slider .bx-pager .bx-pager-item a:hover {
-  background: #2ab0b3 none repeat scroll 0 0;
-}
-.main-slider .bx-controls-direction {
-  display: none;
-}
-.main-slider .bx-wrapper {
-  margin: 0;
+.main-slider .caption a:hover {
+  background: #35a6ac none repeat scroll 0 0;
 }
 .news-letter {
   background: transparent url("../images/news-bg.jpg") no-repeat scroll 0 center / cover;
@@ -167,7 +158,7 @@ header .logo img {
   width: 360px;
 }
 .news-letter input[type="submit"] {
-  background: red url("../images/grd.png") repeat-x scroll 0 0;
+  background: #46b7bd none repeat scroll 0 0;
   border: medium none;
   color: #fff;
   display: inline-block;
@@ -176,6 +167,7 @@ header .logo img {
 }
 .content-box {
   text-align: center;
+  margin-top: 40px;
 }
 .head2 {
   color: #46b7bd;
@@ -243,7 +235,7 @@ header .logo img {
   position: relative;
 }
 .workshops-item:after {
-  background: transparent none repeat scroll 0 0;
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
   box-shadow: 0 0 40px -14px #909090 inset;
   content: "";
   height: 100%;
@@ -252,10 +244,13 @@ header .logo img {
   top: 0;
   width: 100%;
 }
+.workshops-item:hover:after {
+  background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;
+}
 .workshops-item img {
   width: 100%;
 }
-.workshops-item h4 {
+.workshops-item a {
   background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;
   color: #fff;
   font-size: 36px;
@@ -265,6 +260,11 @@ header .logo img {
   text-transform: uppercase;
   top: 47%;
   width: 100%;
+  z-index: 1;
+  left: 0;
+}
+.workshops-item:hover a {
+  background: rgba(70, 183, 189, 0.8) none repeat scroll 0 0;
 }
 .blog-item {
   margin-bottom: 30px;
@@ -296,11 +296,14 @@ header .logo img {
   font-size: 19px;
 }
 .blog-item .info-box a {
-  background: red url("../images/grd.png") repeat-x scroll 0 0;
+  background: #46b7bd repeat scroll 0 0;
   color: #fff;
   float: right;
   font-family: "Nexa", arial, sans-serif;
   padding: 8px 12px;
+}
+.blog-item .info-box a:hover {
+  background: #36A7AD repeat scroll 0 0;
 }
 .full-testimonials {
   background: transparent url("../images/test-bg.jpg") no-repeat scroll 0 0;
@@ -334,9 +337,6 @@ header .logo img {
   font-size: 27px;
   font-style: italic;
   font-weight: 300;
-}
-.full-testimonials .testimonials .bx-controls-direction {
-  color: Red;
 }
 .full-testimonials .testimonials .bx-controls-direction a {
   height: 70px;
@@ -535,7 +535,10 @@ footer .social a:nth-child(n+6):hover {
 }
 footer .ft-nav {
   margin: 20px 0;
-  text-align: center;
+  bxslidertext-align: center;
+}
+footer .ft-nav li {
+  display: inline-block;
 }
 footer .ft-nav a {
   color: #2ab0b3;
@@ -653,7 +656,7 @@ footer .copy a {
     top: 17%;
   }
   .main-slider .caption h3 {
-    font-size: 23px;
+    font-size: 27px;
   }
   .main-slider .caption p {
     font-size: 15px;
@@ -817,7 +820,7 @@ footer .copy a {
     top: 30%;
   }
   .main-slider .caption h3 {
-    font-size: 38px;
+    font-size: 35px;
   }
   .main-slider .caption p {
     font-size: 20px;
@@ -878,7 +881,7 @@ footer .copy a {
     font-size: 40px;
   }
   .main-slider .caption h3 {
-    font-size: 48px;
+    font-size: 40px;
   }
   .main-slider .caption p {
     font-size: 23px;
@@ -901,7 +904,7 @@ footer .copy a {
     top: 41%;
   }
   .main-slider .caption h3 {
-    font-size: 55px;
+    font-size: 42px;
   }
   .news-letter h4 {
     font-size: 43px;
