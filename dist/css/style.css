@@ -86,7 +86,8 @@ header .logo img {
   display: inline-block;
 }
 .navbar .main-ul li a:hover,
-.navbar .main-ul li a:focus {
+.navbar .main-ul li a:focus,
+.navbar .main-ul li a.active {
   color: #fff;
   background: #2ab0b3;
 }
@@ -142,7 +143,7 @@ header .logo img {
   margin: 0;
 }
 .news-letter {
-  background: transparent url("../images/news-bg.jpg") repeat scroll 0 center;
+  background: transparent url("../images/news-bg.jpg") no-repeat scroll 0 center / cover;
   padding: 60px 0;
   text-align: center;
 }
@@ -556,6 +557,94 @@ footer .copy {
 footer .copy a {
   color: #46b8be;
 }
+.about-img {
+  margin-top: 50px;
+  width: 100%;
+}
+.about-img img {
+  width: 100%;
+}
+.about-info {
+  margin-bottom: 50px;
+  margin-top: 47px;
+}
+.about-info h2 {
+  color: #46b7bd;
+  font-size: 45px;
+  font-weight: 600;
+}
+.about-info p {
+  color: #8f8f8f;
+  font-family: Alegreya Sans SC;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.4;
+}
+.about-work {
+  background: #ece8e1 url("../images/about-work.jpg") repeat scroll center center / cover;
+  padding: 50px 10px;
+}
+.about-work h3,
+.make-happy h3 {
+  color: #e32485;
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+.about-work p {
+  color: #4f4f4f;
+  font-family: Alegreya Sans SC;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+}
+.make-happy {
+  background: #fff url("../images/makes-bg.png") no-repeat scroll 0 0;
+  padding: 50px 0;
+}
+.make-happy h3 {
+  color: #46b7bd;
+}
+.make-happy .infobox {
+  background: #46b7bd none repeat scroll 0 0;
+  display: inline-block;
+  margin-top: 110px;
+  padding: 34px 30px;
+  position: relative;
+  width: 70%;
+}
+.make-happy .infobox p,
+.about-site .about-site-info p {
+  color: #fff;
+  font-family: Alegreya Sans SC;
+  font-size: 25px;
+  font-weight: 300;
+  padding-right: 70px;
+}
+.make-happy .infobox img {
+  position: absolute;
+  right: -42%;
+  top: -65px;
+}
+.about-site {
+  background: #252628 url("../images/about-site.jpg") no-repeat scroll center center / cover;
+  padding: 80px 0;
+}
+.about-site .about-site-info {
+  background: rgba(255, 255, 255, 0.9) none repeat scroll 0 0;
+  padding: 30px;
+}
+.about-site .about-site-info h3 {
+  color: #dd5293;
+  font-size: 42px;
+  font-weight: bold;
+  margin: 0 0 20px;
+}
+.about-site .about-site-info p {
+  color: #dd5293;
+}
 @media only screen and (min-width: 0px) and (max-width: 767px) {
   header .logo {
     width: 240px;
@@ -619,6 +708,38 @@ footer .copy a {
     margin-top: 8px;
     padding: 0 9px;
   }
+  .about-info h2 {
+    font-size: 36px;
+  }
+  .about-work h3,
+  .make-happy h3,
+  .make-happy h3 {
+    font-size: 34px;
+  }
+  .make-happy .infobox {
+    margin-top: 20px;
+    width: 100%;
+  }
+  .make-happy .infobox img {
+    position: relative;
+    right: 0;
+    top: 0;
+  }
+  .make-happy .infobox p,
+  .about-site .about-site-info p {
+    padding-right: 0;
+    font-size: 22px;
+  }
+  .about-site .about-site-info h3 {
+    font-size: 34px;
+  }
+  .about-work,
+  .make-happy {
+    padding: 20px 0px;
+  }
+  .about-site {
+    padding: 50px 0;
+  }
 }
 @media only screen and (min-width: 0px) and (max-width: 480px) {
   .main-slider .caption {
@@ -670,6 +791,23 @@ footer .copy a {
     margin-right: 5px;
     width: 40px;
   }
+  .about-work h3,
+  .make-happy h3,
+  .make-happy h3 {
+    font-size: 25px;
+  }
+  .about-site .about-site-info h3 {
+    font-size: 25px;
+  }
+  .make-happy .infobox {
+    padding: 10px;
+  }
+  .make-happy .infobox img {
+    width: 100%;
+  }
+  .about-site .about-site-info {
+    padding: 12px;
+  }
 }
 @media (min-width: 768px) {
   .navbar .main-ul li a {
@@ -713,7 +851,26 @@ footer .copy a {
     font-size: 15px;
   }
   .main-wrapper .calm-item {
-    margin-bottom: 25px;
+    margin-bottom: 10px;
+  }
+  .about-info h2 {
+    font-size: 38px;
+  }
+  .about-work h3,
+  .make-happy h3,
+  .make-happy h3 {
+    font-size: 36px;
+  }
+  .make-happy .infobox p,
+  .about-site .about-site-info p,
+  .about-site .about-site-info p {
+    font-size: 22px;
+  }
+  .about-site .about-site-info h3 {
+    font-size: 38px;
+  }
+  .make-happy .infobox img {
+    width: 293px;
   }
 }
 @media (min-width: 992px) {
@@ -732,8 +889,8 @@ footer .copy a {
   .full-testimonials .testimonials .test-item p {
     font-size: 25px;
   }
-  .main-wrapper .calm-item {
-    margin-bottom: 0;
+  .make-happy .infobox img {
+    width: 368px;
   }
 }
 @media (min-width: 1200px) {
@@ -773,6 +930,25 @@ footer .copy a {
   }
   footer .copy {
     font-size: 13px;
+  }
+  .about-info h2 {
+    font-size: 45px;
+  }
+  .about-work h3,
+  .make-happy h3,
+  .make-happy h3 {
+    font-size: 50px;
+  }
+  .make-happy .infobox p,
+  .about-site .about-site-info p,
+  .about-site .about-site-info p {
+    font-size: 25px;
+  }
+  .make-happy .infobox img {
+    width: initial;
+  }
+  .about-site .about-site-info h3 {
+    font-size: 42px;
   }
 }
 @media only screen and (min-width: 0px) and (max-width: 992px) {
