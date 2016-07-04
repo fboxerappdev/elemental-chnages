@@ -216,7 +216,7 @@ header .logo img {
 .main-wrapper .calm-item .over h3 {
   align-self: center;
   color: #fff;
-  font-family: Alegreya Sans SC;
+  font-family: Open Sans;
   font-size: 50px;
   margin: 0;
   width: 100%;
@@ -284,7 +284,7 @@ header .logo img {
 }
 .blog-item .info-box {
   display: inline-block;
-  font-family: Alegreya Sans SC;
+  font-family: Open Sans;
   padding: 23px;
 }
 .blog-item .info-box h3 {
@@ -316,7 +316,7 @@ header .logo img {
   width: 100%;
 }
 .full-testimonials .testimonials h2 {
-  font-family: Alegreya Sans SC;
+  font-family: Open Sans;
   font-size: 54px;
   text-align: center;
   text-transform: uppercase;
@@ -333,7 +333,7 @@ header .logo img {
   width: 110px;
 }
 .full-testimonials .testimonials .test-item p {
-  font-family: Alegreya Sans SC;
+  font-family: Open Sans;
   font-size: 27px;
   font-style: italic;
   font-weight: 300;
@@ -375,40 +375,51 @@ header .logo img {
 }
 .contact-form h2 {
   color: #fff;
-  font-family: Alegreya Sans SC;
+  font-family: Open Sans;
   font-size: 55px;
   font-weight: 300;
   margin-bottom: 30px;
   text-align: center;
 }
 .contact-form input,
-.contact-form textarea {
+.contact-form textarea,
+.contact-form select {
   background: rgba(70, 183, 189, 0.8) none repeat scroll 0 0;
   border: medium none;
   border-radius: 0;
   color: #fff;
-  font-family: Alegreya Sans SC;
+  font-family: Open Sans;
   font-size: 21px;
   font-weight: 300;
   height: 54px;
   padding: 0 15px;
 }
 .contact-form input::-webkit-input-placeholder,
-.contact-form textarea::-webkit-input-placeholder {
+.contact-form textarea::-webkit-input-placeholder,
+.contact-form select::-webkit-input-placeholder {
   color: #fff;
 }
+.contact-form input select,
+.contact-form textarea select,
+.contact-form select select {
+  -moz-appearance: none;
+  background: url("../images/drop-arrow.png") no-repeat scroll center center;
+}
 .contact-form input:-moz-placeholder,
-.contact-form textarea:-moz-placeholder {
+.contact-form textarea:-moz-placeholder,
+.contact-form select:-moz-placeholder {
   /* Firefox 18- */
   color: #fff;
 }
 .contact-form input::-moz-placeholder,
-.contact-form textarea::-moz-placeholder {
+.contact-form textarea::-moz-placeholder,
+.contact-form select::-moz-placeholder {
   /* Firefox 19+ */
   color: #fff;
 }
 .contact-form input:-ms-input-placeholder,
-.contact-form textarea:-ms-input-placeholder {
+.contact-form textarea:-ms-input-placeholder,
+.contact-form select:-ms-input-placeholder {
   color: #fff;
 }
 .contact-form textarea {
@@ -578,7 +589,7 @@ footer .copy a {
 }
 .about-info p {
   color: #8f8f8f;
-  font-family: Alegreya Sans SC;
+  font-family: Open Sans;
   font-size: 18px;
   font-weight: 300;
   line-height: 1.4;
@@ -597,7 +608,7 @@ footer .copy a {
 }
 .about-work p {
   color: #4f4f4f;
-  font-family: Alegreya Sans SC;
+  font-family: Open Sans;
   font-size: 22px;
   font-weight: 400;
   line-height: 1.5;
@@ -621,7 +632,7 @@ footer .copy a {
 .make-happy .infobox p,
 .about-site .about-site-info p {
   color: #fff;
-  font-family: Alegreya Sans SC;
+  font-family: Open Sans;
   font-size: 25px;
   font-weight: 300;
   padding-right: 70px;
